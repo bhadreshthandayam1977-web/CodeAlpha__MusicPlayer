@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player - CodeAlpha</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <!-- Album Art -->
+            <div class="album-art">
+                <img id="albumArt" src="https://via.placeholder.com/300?text=Album+Art" alt="Album Art">
+            </div>
+
+            <!-- Song Info -->
+            <div class="song-info">
+                <h2 id="songTitle">Song Title</h2>
+                <p id="artistName">Artist Name</p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                    <input type="range" id="progressRange" min="0" max="100" value="0">
+                </div>
+                <div class="time-display">
+                    <span id="currentTime">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button id="prevBtn" class="control-btn prev-btn">
+                    ⏮️ Previous
+                </button>
+                <button id="playBtn" class="control-btn play-btn">
+                    ▶️ Play
+                </button>
+                <button id="nextBtn" class="control-btn next-btn">
+                    Next ⏭️
+                </button>
+            </div>
+
+            <!-- Volume Control -->
+            <div class="volume-container">
+                <label for="volumeControl">🔊 Volume:</label>
+                <input type="range" id="volumeControl" min="0" max="100" value="70">
+                <span id="volumePercent">70%</span>
+            </div>
+
+            <!-- Playlist -->
+            <div class="playlist">
+                <h3>Playlist</h3>
+                <ul id="playlistItems">
+                    <li class="playlist-item" data-index="0">
+                        <span class="song-name">Song 1</span>
+                        <span class="artist-name">Artist 1</span>
+                    </li>
+                    <li class="playlist-item" data-index="1">
+                        <span class="song-name">Song 2</span>
+                        <span class="artist-name">Artist 2</span>
+                    </li>
+                    <li class="playlist-item" data-index="2">
+                        <span class="song-name">Song 3</span>
+                        <span class="artist-name">Artist 3</span>
+                    </li>
+                    <li class="playlist-item" data-index="3">
+                        <span class="song-name">Song 4</span>
+                        <span class="artist-name">Artist 4</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Audio Element -->
+    <audio id="audioPlayer"></audio>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
